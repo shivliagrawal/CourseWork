@@ -1,0 +1,10 @@
+2024-11-18 16:23:34.191 [info] Extension host with pid 83566 started
+2024-11-18 16:23:34.259 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2024-11-18 16:23:34.286 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2024-11-18 16:23:34.286 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2024-11-18 16:23:34.548 [info] Eager extensions activated
+2024-11-18 16:23:34.548 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-18 16:23:34.549 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-18 16:25:10.972 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2024-11-18 19:32:05.549 [info] Extension host terminating: renderer disconnected for too long (1)
+2024-11-18 19:32:05.606 [info] Extension host with pid 83566 exiting with code 0

@@ -1,0 +1,37 @@
+
+Part 1-
+
+the output from thr2 is all Cs because the printC("C"); call in the main function enters an infinite loop before the threads for printing "A" and "B" are created. As a result, the program never reaches the pthread_create calls, and only "C" is printed continuously.
+
+Part 4-
+
+pthread_mutex (count)
+real	0m1.557s
+user	0m2.081s
+sys	0m0.981s
+
+spin lock (count_spin with thr_yield)
+real	0m0.364s
+user	0m0.566s
+sys	0m0.144s
+
+
+spin_lock (count_spin without thr_yield) 
+real	0m0.367s
+user	0m0.549s
+sys	0m0.180s
+
+
+1. With sched_yield: User time is lower because threads yield the CPU, reducing busy-waiting in user mode.
+Without sched_yield: User time is higher due to continuous spinning, keeping the CPU busy in user mode.
+
+2. count (pthread mutex): System time is influenced by kernel involvement in blocking and waking threads during mutex operations.
+count_spin with sched_yield: System time increases due to frequent scheduler system calls when threads yield, balancing CPU usage more effectively.
+
+Part 7-
+
+Correct lil endian bytes- \xef\xbe\xad\xde
+
+./buffer $(printf "AAAAAAAAAAAAAAA\xef\xbe\xad\xde")
+
+The code works by exploiting a buffer overflow vulnerability to overwrite the set_me variable with 0xdeadbeef, which triggers the shell() function when the condition if(set_me == 0xdeadbeef) is met.

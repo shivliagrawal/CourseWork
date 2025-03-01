@@ -1,0 +1,76 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[36m╷[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m│  └─[0m [36mTriangleTest[0m [32m✔[0m
+[36m│     └─[0m [36mtest(int, int, int, String, String)[0m [32m✔[0m
+[36m│        ├─[0m [31m[1] 100, 100, 1, Invalid, exp[0m [31m✘[0m [31mExpected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.[0m
+[36m│        ├─[0m [34m[2] 100, 100, 100, 2, none[0m [32m✔[0m
+[36m│        ├─[0m [34m[3] 120, 200, 130, 0, none[0m [32m✔[0m
+[36m│        ├─[0m [34m[4] 100, 100, 201, Out of Range, exp[0m [32m✔[0m
+[36m│        ├─[0m [31m[5] 100, 100, 200, Invalid, exp[0m [31m✘[0m [31mExpected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.[0m
+[36m│        ├─[0m [34m[6] 120, 120, 100, 1, none[0m [32m✔[0m
+[36m│        ├─[0m [31m[7] 2, 50, 2, Invalid, exp[0m [31m✘[0m [31mExpected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.[0m
+[36m│        └─[0m [34m[8] 201, 201, 201, Out of Range, exp[0m [32m✔[0m
+[36m├─[0m [36mJUnit Vintage[0m [32m✔[0m
+[36m└─[0m [36mJUnit Platform Suite[0m [32m✔[0m
+
+Failures (3):
+  JUnit Jupiter:TriangleTest:test(int, int, int, String, String):[1] 100, 100, 1, Invalid, exp
+    MethodSource [className = 'TriangleTest', methodName = 'test', methodParameterTypes = 'int, int, int, java.lang.String, java.lang.String']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+       TriangleTest.test(TriangleTest.java:13)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:TriangleTest:test(int, int, int, String, String):[5] 100, 100, 200, Invalid, exp
+    MethodSource [className = 'TriangleTest', methodName = 'test', methodParameterTypes = 'int, int, int, java.lang.String, java.lang.String']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+       TriangleTest.test(TriangleTest.java:13)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:TriangleTest:test(int, int, int, String, String):[7] 2, 50, 2, Invalid, exp
+    MethodSource [className = 'TriangleTest', methodName = 'test', methodParameterTypes = 'int, int, int, java.lang.String, java.lang.String']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+       TriangleTest.test(TriangleTest.java:13)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+
+Test run finished after 177 ms
+[         5 containers found      ]
+[         0 containers skipped    ]
+[         5 containers started    ]
+[         0 containers aborted    ]
+[         5 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         3 tests failed          ]
+

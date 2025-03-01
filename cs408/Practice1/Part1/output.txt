@@ -1,0 +1,47 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[36m╷[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m│  └─[0m [36mTriangleTest[0m [32m✔[0m
+[36m│     ├─[0m [34mtestRange()[0m [32m✔[0m
+[36m│     └─[0m [36mtest(int, int, int, int)[0m [32m✔[0m
+[36m│        ├─[0m [31m[1] 100, 100, 1, -1[0m [31m✘[0m [31mexpected: <-1> but was: <1>[0m
+[36m│        ├─[0m [34m[2] 100, 100, 100, 2[0m [32m✔[0m
+[36m│        ├─[0m [34m[3] 150, 200, 130, 0[0m [32m✔[0m
+[36m│        ├─[0m [34m[4] 100, 100, 200, -1[0m [32m✔[0m
+[36m│        ├─[0m [34m[5] 120, 120, 100, 1[0m [32m✔[0m
+[36m│        └─[0m [34m[6] 2, 50, 2, -1[0m [32m✔[0m
+[36m├─[0m [36mJUnit Vintage[0m [32m✔[0m
+[36m└─[0m [36mJUnit Platform Suite[0m [32m✔[0m
+
+Failures (1):
+  JUnit Jupiter:TriangleTest:test(int, int, int, int):[1] 100, 100, 1, -1
+    MethodSource [className = 'TriangleTest', methodName = 'test', methodParameterTypes = 'int, int, int, int']
+    => org.opentest4j.AssertionFailedError: expected: <-1> but was: <1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+       TriangleTest.test(TriangleTest.java:11)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 166 ms
+[         5 containers found      ]
+[         0 containers skipped    ]
+[         5 containers started    ]
+[         0 containers aborted    ]
+[         5 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         1 tests failed          ]
+

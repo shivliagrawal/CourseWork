@@ -1,0 +1,8 @@
+Listening on 127.0.0.1:46439
+[2024-11-18 16:23:24] info Disposed of connection to running server.
+looking for token 4c74c01b-95af-4778-9fce-c0633be52f63, got Some("4c74c01b-95af-4778-9fce-c0633be52f63")
+[2024-11-18 16:23:24] info Checking /homes/agraw185/.vscode-server/cli/servers/Stable-384ff7382de624fb94dbaf6da11977bba1ecd427/log.txt and /homes/agraw185/.vscode-server/cli/servers/Stable-384ff7382de624fb94dbaf6da11977bba1ecd427/pid.txt for a running server...
+[2024-11-18 16:23:27] info Downloading Visual Studio Code server -> /tmp/.tmpdAERvc/vscode-server-linux-x64.tar.gz
+[2024-11-18 16:23:32] info Starting server...
+[2024-11-18 16:23:32] info Server started
+[2024-11-18 16:31:20] info Disposed of connection to running server.

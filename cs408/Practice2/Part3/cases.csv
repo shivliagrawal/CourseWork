@@ -1,0 +1,9 @@
+100,100,1,Invalid,exp
+100,100,100,2,none
+120,200,130,0,none
+100,100,201,Out of Range,exp
+100,100,200,Invalid,exp
+120,120,100,1,none
+2,50,2,Invalid,exp
+201,201,201,Out of Range,exp
+

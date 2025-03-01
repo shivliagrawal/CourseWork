@@ -1,0 +1,25 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to /tmp/code-3e4bafd1-608f-45c2-b3e0-d05ca3905d20
+Extension host agent listening on /tmp/code-3e4bafd1-608f-45c2-b3e0-d05ca3905d20
+
+[16:23:32] 
+
+
+
+
+[16:23:32] Extension host agent started.
+[16:23:33] Started initializing default profile extensions in extensions installation folder. file:///homes/agraw185/.vscode-server/extensions
+[16:23:33] [<unknown>][015e02a3][ExtensionHostConnection] New connection established.
+[16:23:33] Completed initializing default profile extensions in extensions installation folder. file:///homes/agraw185/.vscode-server/extensions
+[16:23:33] [<unknown>][72067a62][ManagementConnection] New connection established.
+[16:23:33] [<unknown>][015e02a3][ExtensionHostConnection] <83566> Launched Extension Host Process.
+New EH opened, aborting shutdown
+[16:28:32] New EH opened, aborting shutdown
+[16:31:45] No ptyHost heartbeat after 6 seconds
+[16:31:50] [<unknown>][72067a62][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...

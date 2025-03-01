@@ -1,0 +1,7 @@
+2024/11/18-16:41:51.348 bf180 Reusing MANIFEST /homes/agraw185/.config/google-chrome/Default/WebStorage/3/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2024/11/18-16:41:51.350 bf180 Recovering log #3
+2024/11/18-16:41:51.351 bf180 Reusing old log /homes/agraw185/.config/google-chrome/Default/WebStorage/3/IndexedDB/indexeddb.leveldb/000003.log 
+2024/11/18-16:51:54.995 bf180 Level-0 table #5: started
+2024/11/18-16:51:55.000 bf180 Level-0 table #5: 22800 bytes OK
+2024/11/18-16:51:55.017 bf180 Delete type=0 #3
+2024/11/18-16:51:55.017 bf180 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

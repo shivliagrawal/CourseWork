@@ -1,0 +1,3 @@
+2024-11-18 16:18:39.031 [info] Started initializing default profile extensions in extensions installation folder. file:///homes/agraw185/scratch/.vscode/extensions
+2024-11-18 16:18:39.064 [warning] Failed to create default profile extensions manifest in extensions installation folder. file:///homes/agraw185/scratch/.vscode/extensions Unable to create file 'vscode-userdata:/homes/agraw185/scratch/.vscode/extensions/extensions.json' that already exists when overwrite flag is not set
+2024-11-18 16:18:39.064 [info] Completed initializing default profile extensions in extensions installation folder. file:///homes/agraw185/scratch/.vscode/extensions

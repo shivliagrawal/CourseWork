@@ -1,0 +1,20 @@
+xscreensaver.timeout:		0:10:00
+xscreensaver.cycle:		0:10:00
+xscreensaver.lock:		True
+xscreensaver.lockTimeout:	0:00:00
+xscreensaver.passwdTimeout:	0:01:00
+xscreensaver.passwdTimeoutEnable:	True
+xscreensaver.dpmsEnabled:	True
+xscreensaver.dpmsStandby:	0:10:00
+xscreensaver.dpmsSuspend:	0:10:00
+xscreensaver.dpmsOff:		0:10:00
+
+XTerm*iconic:		off
+XTerm*loginShell:	on
+XTerm*reverseWrap:	on
+XTerm*saveLines:	200
+XTerm*scrollBar:	on
+XTerm*visualBell:	off
+XTerm*font:		7x13
+
+Dtterm*loginShell:	on

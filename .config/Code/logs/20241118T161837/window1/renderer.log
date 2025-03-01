@@ -1,5 +1,0 @@
-2024-11-18 16:18:38.704 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/u/riker/u88/agraw185/test.txt","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
-2024-11-18 16:18:38.939 [info] Started local extension host with pid 790634.
-2024-11-18 16:18:38.964 [info] Started initializing default profile extensions in extensions installation folder. file:///homes/agraw185/scratch/.vscode/extensions
-2024-11-18 16:18:39.044 [info] Completed initializing default profile extensions in extensions installation folder. file:///homes/agraw185/scratch/.vscode/extensions
-2024-11-18 16:18:41.798 [info] [perf] Render performance baseline is 15ms

@@ -1,6 +1,0 @@
-classify-client.services.mozilla.com:HSTS	0	19248	1694640611653,1,0
-services.addons.mozilla.org:HSTS	0	19248	1694640610974,1,0
-start.ubuntu-mate.org^partitionKey=%28http%2Cubuntu-mate.org%29:HSTS	0	19248	1678656611659,1,0
-contile.services.mozilla.com:HSTS	0	19248	1694640611654,1,0
-location.services.mozilla.com:HSTS	0	19248	1694640611317,1,1
-normandy.cdn.mozilla.net:HSTS	0	19248	1694640611317,1,0

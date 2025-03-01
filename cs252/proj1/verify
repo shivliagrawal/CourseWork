@@ -1,0 +1,61 @@
+#!/bin/bash
+
+check_name() {
+    local name="$1"
+    if [[ "$name" =~ ^[A-Z][a-z]+,\ [A-Z][a-z]+(\ [A-Z]\.)?$ ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+check_address() {
+    local address="$1"
+    if [[ "$address" =~ ^[0-9]+(\ [A-Z0-9][a-zA-Z0-9]*\.?)+$ ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+usage_prompt() {
+    echo "Usage: verify <filename>"
+    exit 1
+}
+
+if [[ $# -ne 1 ]]; then
+    usage_prompt
+fi
+
+if [[ ! -r "$1" ]]; then
+    echo "$1 is not readable!"
+    exit 2
+fi
+
+line_num=1
+while IFS= read -r line || [[ -n "$line" ]]; do
+    name=$(echo "$line" | cut -d ';' -f 1)
+    address=$(echo "$line" | cut -d ';' -f 2)
+
+    correct_name=0
+    correct_address=0
+    check_name "$name"
+    correct_name=$?
+    check_address "$address"
+    correct_address=$?
+
+    if [[ $correct_name -eq 0 && $correct_address -eq 0 ]]; then
+        echo "Line $line_num is valid."
+    elif [[ $correct_name -eq 1 && $correct_address -eq 0 ]]; then
+        echo "Line $line_num has an invalid name."
+    elif [[ $correct_name -eq 0 && $correct_address -eq 1 ]]; then
+        echo "Line $line_num has an invalid address."
+    else
+        echo "Line $line_num has an invalid name and address."
+    fi
+
+    line_num=$((line_num + 1))
+done < "$1"
+
+exit 0
+

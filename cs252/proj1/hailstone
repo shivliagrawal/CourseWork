@@ -1,0 +1,37 @@
+#!/bin/bash
+
+sequence() {
+    local n=$1
+    local k=$2
+    local count=0
+
+    while (( count < k )); do
+        echo -n "$n "
+        ((count++))
+
+        if (( n == 1 )); then
+            break
+        fi
+
+        if (( n % 2 == 0 )); then
+            n=$((n / 2))
+        else
+            n=$((3 * n + 1))
+        fi
+    done
+
+    echo
+}
+
+if [ $# -ne 2 ]; then
+    echo "Usage: hailstone <start> <limit>"
+    exit 1
+fi
+
+start=$1
+limit=$2
+
+sequence $start $limit
+
+exit 0
+

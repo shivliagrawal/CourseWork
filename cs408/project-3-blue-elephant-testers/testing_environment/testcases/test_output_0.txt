@@ -1,0 +1,4 @@
+331 Password please.
+230 User logged in.
+257 "pineapple" has been created.
+221 goodbye

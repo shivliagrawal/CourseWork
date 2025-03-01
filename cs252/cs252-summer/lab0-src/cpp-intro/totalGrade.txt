@@ -1,0 +1,5 @@
+problems/dllist-src: 21/21
+problems/mysort-src: 21/21
+
+CS252: LAB6. agraw185 Tue Jun 18 15:02:45 EDT 2024
+Total Grade: 42/42

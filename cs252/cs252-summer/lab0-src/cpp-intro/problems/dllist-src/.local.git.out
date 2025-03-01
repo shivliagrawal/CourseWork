@@ -1,0 +1,406 @@
+[master 8351d84] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 178 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/DLList.cpp
+ create mode 100644 problems/dllist-src/DLList.h
+ create mode 100644 problems/dllist-src/total.out
+[master 887ab5d] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 118 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/mytest.c
+ create mode 100644 problems/dllist-src/total.out
+[master 8b9a981] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+ create mode 100644 problems/dllist-src/total.out
+[master 1bd4718] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 insertion(+), 5 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+[master 5db15bb] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master 5d60e63] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master 2ede866] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master 467f8df] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master f5db64d] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master f4c8ba0] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master 9f92f43] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master 78d3635] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master dc4b565] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 60 insertions(+)
+ create mode 100644 problems/dllist-src/DLList.h
+ create mode 100644 problems/dllist-src/total.out
+[master e02ce65] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+ delete mode 100644 problems/arraylist-src/total.out
+ create mode 100644 problems/dllist-src/total.out
+[master (root-commit) 34830ae] 0 of 21
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 60 insertions(+)
+ create mode 100644 problems/dllist-src/DLList.h
+ create mode 100644 problems/dllist-src/total.out
+[master 58908f8] 0 of 21
+ 2 files changed, 60 insertions(+)
+ create mode 100644 lab6-src/problems/dllist-src/DLList.h
+ create mode 100644 lab6-src/problems/dllist-src/total.out
+[master 53004e0] 18 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 30 insertions(+), 18 deletions(-)
+ create mode 100644 cpp-intro/problems/dllist-src/total.out
+ delete mode 100644 cpp-intro/problems/mysort-src/total.out
+[master 4198e42] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 77 insertions(+), 8 deletions(-)
+ create mode 100644 cpp-intro/problems/dllist-src/total.out
+ delete mode 100644 cpp-intro/problems/mysort-src/total.out
+[master 87ed2e5] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 19 insertions(+), 5 deletions(-)
+ create mode 100644 cpp-intro/problems/dllist-src/total.out
+[master 51c5805] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 19 insertions(+), 4 deletions(-)
+ rename cpp-intro/problems/{mysort-src => dllist-src}/total.out (50%)
+[master 717a9b7] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 19 insertions(+), 4 deletions(-)
+ rename cpp-intro/problems/{mysort-src => dllist-src}/total.out (50%)
+[master 604c154] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 19 insertions(+), 4 deletions(-)
+ rename cpp-intro/problems/{mysort-src => dllist-src}/total.out (50%)
+[master d0a697b] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 19 insertions(+), 5 deletions(-)
+ create mode 100644 cpp-intro/problems/dllist-src/total.out
+[master dc50728] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 19 insertions(+), 5 deletions(-)
+ create mode 100644 cpp-intro/problems/dllist-src/total.out
+[master a455e59] 21 of 21
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 18 insertions(+), 3 deletions(-)
+ rename cpp-intro/problems/{mysort-src => dllist-src}/total.out (52%)

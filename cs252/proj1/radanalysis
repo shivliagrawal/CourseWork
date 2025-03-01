@@ -1,0 +1,46 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: radanalysis <filename> <cutoff level>"
+    exit 1
+fi
+
+filename=$1
+cutoff=$2
+
+if [ ! -f "$filename" ]; then
+    echo "File not found!"
+    exit 1
+fi
+
+exceed_count=0
+
+while read -r line; do
+    run_code=$(echo $line | awk '{print $1}')
+    measurements=$(echo $line | awk '{$1=""; print $0}')
+
+    sum=0
+    count=0
+    for measurement in $measurements; do
+        sum=$((sum + measurement))
+        count=$((count + 1))
+        if [ "$measurement" -gt "$cutoff" ]; then
+            exceed_count=$((exceed_count + 1))
+        fi
+    done
+
+    if [ "$count" -gt 0 ]; then
+        avg=$((sum / count))
+    else
+        avg=0
+    fi
+
+    printf "%02d  %d\n" "$run_code" "$avg"
+done < "$filename"
+
+if [ "$exceed_count" -gt 0 ]; then
+    echo "*** WARNING: Number of measurements exceeding specified radiation level: $exceed_count! ***"
+fi
+
+exit 0
+

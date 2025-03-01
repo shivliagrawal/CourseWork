@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ "$#" -ne 0 ]; then
+    echo "Usage: compile"
+    exit 1
+fi
+
+success=0
+
+for src_file in src*.c; do
+    echo "C program: $src_file"
+    
+    gcc -Wall -std=c99 "$src_file"
+    
+    if [ $? -eq 0 ]; then
+        echo "Successfully compiled!"
+        
+        for input_file in input*.data; do
+            echo "Input file: $input_file"
+            
+            ./a.out < "$input_file"
+            
+            if [ $? -eq 0 ]; then
+                echo "Run successful."
+            else
+                echo "Run failed on $input_file."
+                success=1
+            fi
+        done
+    else
+        echo "Compilation of $src_file failed!"
+        success=1
+    fi
+done
+
+# Exit with the appropriate status
+exit $success
+

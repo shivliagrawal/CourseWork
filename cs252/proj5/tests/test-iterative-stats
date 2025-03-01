@@ -1,0 +1,38 @@
+#! /bin/bash
+
+../myhttpd 0 > /dev/null 2>&1 &
+PID=$!
+PRG=$(basename "$0")
+
+prlimit --nproc=50 --cpu=600 --rss=4000000 -p $PID
+
+function abort() {
+  printf "\033[0;31m${PRG} Failed.\033[0m\n"
+  kill -15 $PID
+  printf "Failure reason: %s\n" "$1"
+  cat tmp/test-iterative-stats
+  rm -rf tmp
+  exit 0
+}
+
+mkdir -p tmp
+sleep 1
+PORT=$(netstat -ntlp 2> /dev/null | awk 'split($7, a, "/"); split($4, b, ":"); {print b[2]" "a[1]}' | awk -v pid="$PID" '$2==pid {print $1}')
+USERSTRING=$(cat ../auth.txt)
+curl -s -u $USERSTRING "127.0.0.1:$PORT/stats" > /dev/null 2>&1
+curl -s -u $USERSTRING "127.0.0.1:$PORT/stats" > tmp/test-iterative-stats
+CODE=$?
+
+if [[ $CODE != 0 ]]; then
+  abort "curl failed"
+else
+  # TODO: test running time <2023-07-14, David Deng> #
+  grep -wq "Max URL: /stats" tmp/test-iterative-stats || abort "max url should be set to /stats"
+  grep -wq "Min URL: /stats" tmp/test-iterative-stats || abort "min url should be set to /stats"
+  num_req="$(grep "Number of Requests: " tmp/test-iterative-stats | sed -E 's/^Number of Requests: ([0-9]+)$/\1/')"
+  if [[ "$num_req" != "1" ]]; then abort "should have 1 requests in total instead of $num_req"; fi
+fi
+
+printf "\033[0;32m$(basename "$0") Passed.\033[0m\n"
+kill -15 $PID
+exit 1

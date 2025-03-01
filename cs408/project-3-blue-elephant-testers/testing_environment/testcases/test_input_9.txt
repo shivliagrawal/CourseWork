@@ -1,0 +1,11 @@
+bftpd.conf
+1:USER cs408
+1:PASS cs408
+2:USER another_user
+2:PASS another_password
+1:MKD client1_dir
+2:MKD client2_dir
+1:RMD client1_dir
+2:RMD client2_dir
+1:QUIT
+2:QUIT

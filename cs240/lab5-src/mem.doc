@@ -1,0 +1,18 @@
+Variable            Address of Variable     Value of Variable         
+------------------- ---------------------   ----------------- 
+str
+a
+b
+y
+x.a
+x.i
+x.b
+x.p
+head
+head->str
+head->next
+head->next->str
+head->next->next
+head->next->next->str
+head->next->next->next
+

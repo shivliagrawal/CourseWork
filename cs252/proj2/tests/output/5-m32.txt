@@ -1,0 +1,22 @@
+0x57ee3050
+(nil)
+[
+	addr: 0080
+	size: 4000
+	left_size: 64
+	allocated: false
+	prev: NULLPTR
+	next: NULLPTR
+]
+
+0x57ee3008
+(nil)
+[
+	addr: 0008
+	size: 4072
+	left_size: 0
+	allocated: false
+	prev: NULLPTR
+	next: NULLPTR
+]
+

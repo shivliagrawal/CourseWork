@@ -1,0 +1,102 @@
+#!/bin/bash
+
+make -C ..
+
+# test runner
+# parameters: testname testpoints
+run_test () {
+    test_name=$1
+    test_pts=$2
+    grade_max=$(echo "$grade_max + $test_pts" | bc)
+
+    echo "TEST: ${test_name}"
+    timeout --preserve-status 60 ./$test_name
+    status=$?
+    if [[ status -gt 10 ]]; then
+        status=0
+    fi
+    if [[ status -eq 0 ]]; then
+        echo "Points: 0/$test_pts"
+    else
+        echo "Points: $test_pts/$test_pts"
+	grade=$(echo "$grade + $test_pts" | bc)
+    fi
+}
+
+# clear global vars vefore each section so they assign points per section
+clear_vars () {
+    grade=0
+    grade_max=0
+}
+
+# pretty print the start of sections
+section_start () {
+    echo -e "=== $1 Start ==="
+}
+
+# pretty print the end of sections
+section_end () {
+    echo -e "=== $1 End === ($grade / $grade_max points) \n"
+}
+
+section_start "Iterative Tests"
+clear_vars
+run_test test-iterative-auth-accept                 2
+run_test test-iterative-simple                      3
+run_test test-iterative-index                       2
+run_test test-iterative-complex-html                4
+run_test test-iterative-mime-types                  4
+run_test test-iterative-complex-embeds              5
+grade1=$grade
+grade1max=$grade_max
+section_end "Iterative Tests"
+
+section_start "Error Tests"
+clear_vars
+run_test test-error-malformed-request               0.5
+run_test test-error-unauthorized                    0.5
+run_test test-error-forbidden                       0.5
+run_test test-error-not-found                       0.5
+run_test test-error-method                          0.5
+run_test test-error-version                         0.5
+grade2=$grade
+grade2max=$grade_max
+section_end "Error Tests"
+
+section_start "Fork Tests"
+clear_vars
+run_test test-fork-zombie                           2
+run_test test-fork-robustness                       3
+grade3=$grade
+grade3max=$grade_max
+section_end "Fork Tests"
+
+section_start "Threaded Server Tests"
+clear_vars
+run_test test-thread-cleanup                        1
+run_test test-thread-load                           2
+run_test test-thread-robustness                     3
+grade4=$grade
+grade4max=$grade_max
+section_end "Threaded Server Tests"
+
+section_start "Thread Pool Server Tests"
+clear_vars
+run_test test-pool-count                            1
+run_test test-pool-load                             2
+run_test test-pool-robustness                       3
+grade5=$grade
+grade5max=$grade_max
+section_end "Thread Pool Server Tests"
+
+total_score=`echo "$grade1 + $grade2 + $grade3 + $grade4 + $grade5" | bc`
+total_max=`echo "$grade1max + $grade2max + $grade3max + $grade4max + $grade5max" | bc`
+
+printf "Iterative Tests:            %03.1f%s%03.1f\n" $grade1 " of " $grade1max
+printf "Error Tests:                %03.1f%s%03.1f\n" $grade2 " of " $grade2max
+printf "Fork Tests:                 %03.1f%s%03.1f\n" $grade3 " of " $grade3max
+printf "Thread Tests:               %03.1f%s%03.1f\n" $grade4 " of " $grade4max
+printf "Thread Pool Tests:          %03.1f%s%03.1f\n" $grade5 " of " $grade5max
+
+echo Score,Total
+echo $total_score,$total_max

@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# tests that each O2, N2, O3, and NO2 are formed when enough source molecules/atoms are present
+OUTFILE=p2out.txt
+
+./test_part2_count 2>&1 >/dev/null
+if [ $? -ne 0 ]; then
+    echo "test_part2_count not passing"
+    echo -e "\e[31mtest_part2_order failed.\e[0m"
+    exit 1
+fi
+
+O_COUNT=1000
+N_COUNT=1000
+timeout 1 stdbuf -oL ../part2 $O_COUNT $N_COUNT > ${OUTFILE}
+
+O_STR="An atom of oxygen was created."
+N_STR="An atom of nitrogen was created."
+O2_STR="Two atoms of oxygen combined to produce one molecule of O2."
+N2_STR="Two atoms of nitrogen combined to produce one molecule of N2."
+O3_STR="Three molecules of O2 combined to produce two molecules of O3."
+NO2_STR="One molecule of N2 and two molecules of O2 combined to produce two molecules of NO2."
+
+function check_for_enough_src() {
+    # $1 = source string
+    # $2 = product string
+    # $3 = expected ratio of source/product
+    local SRC_STR="$1"
+    local PRD_STR="$2"
+    local RATIO="$3"
+    shift 3
+
+    n_prd=$(grep "${PRD_STR}" ${OUTFILE} | wc -l)
+    for (( i = 1; i <= ${n_prd}; i++ )); do
+        ln=$(grep -m${i} -n "${PRD_STR}" ${OUTFILE} | cut -d: -f1 | head -${i} | tail -1)
+        n_src=$(head -${ln} ${OUTFILE} | grep "${SRC_STR}" | wc -l)
+        used=0
+        while [[ "$#" -gt 1 ]]; do
+            local fuel="$1"
+            local count="$2"
+            shift 2
+            n_used=$(head -${ln} ${OUTFILE} | grep "${fuel}" | wc -l)
+            ((used += n_used * count))
+        done
+
+        if ((n_src - used < ratio * i)); then
+            echo "Not enough source atom/molecules (found only ${n_src} occurrences of [$SRC_STR])"
+            echo "      prior to the formation of the ${i}th [$PRD_STR]"
+            echo "          at line ${ln} of $(realpath ${OUTFILE})"
+            echo "      expecting at least $((ratio * i)) + ${used} [$SRC_STR]"
+	    echo -e "\e[31mtest_part2_order failed.\e[0m"
+            exit 1
+        fi
+    done
+}
+
+check_for_enough_src "${O_STR}" "${O2_STR}" 2
+check_for_enough_src "${N_STR}" "${N2_STR}" 2
+check_for_enough_src "${O2_STR}" "${O3_STR}" 3 "${NO2_STR}" 2
+check_for_enough_src "${N2_STR}" "${NO2_STR}" 1
+check_for_enough_src "${O2_STR}" "${NO2_STR}" 2 "${O3_STR}" 3
+
+rm -rf ${OUTFILE}
+
+echo -e "\e[32mtest_part2_order passed.\e[0m"

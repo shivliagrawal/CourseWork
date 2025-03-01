@@ -1,0 +1,138 @@
+0x55fe7afc1848
+0x55fe7afc1898
+[
+	addr: 2120
+	size: 24
+	left_size: 24
+	allocated: false
+	prev: NULLPTR
+	next: 2200
+]
+
+[
+	addr: 2200
+	size: 1864
+	left_size: 24
+	allocated: false
+	prev: 2120
+	next: NULLPTR
+]
+
+BREAK
+0x55fe7afc1010
+0x55fe7afc1bc0
+[
+	addr: 0016
+	size: 2048
+	left_size: 0
+	allocated: false
+	prev: NULLPTR
+	next: 3008
+]
+
+[
+	addr: 3008
+	size: 1056
+	left_size: 400
+	allocated: false
+	prev: 0016
+	next: 2120
+]
+
+[
+	addr: 2120
+	size: 24
+	left_size: 24
+	allocated: false
+	prev: 3008
+	next: 2200
+]
+
+[
+	addr: 2200
+	size: 1864
+	left_size: 24
+	allocated: false
+	prev: 2120
+	next: NULLPTR
+]
+
+BREAK
+0x55fe7afc18d0
+0x55fe7afc1010
+[
+	addr: 2256
+	size: 1808
+	left_size: 40
+	allocated: false
+	prev: NULLPTR
+	next: 0016
+]
+
+[
+	addr: 0016
+	size: 2048
+	left_size: 0
+	allocated: false
+	prev: 2256
+	next: 3008
+]
+
+[
+	addr: 3008
+	size: 1056
+	left_size: 400
+	allocated: false
+	prev: 0016
+	next: 2120
+]
+
+[
+	addr: 2120
+	size: 24
+	left_size: 24
+	allocated: false
+	prev: 3008
+	next: NULLPTR
+]
+
+BREAK
+0x55fe7afc1048
+0x55fe7afc18d0
+[
+	addr: 0072
+	size: 1992
+	left_size: 40
+	allocated: false
+	prev: NULLPTR
+	next: 2256
+]
+
+[
+	addr: 2256
+	size: 1808
+	left_size: 40
+	allocated: false
+	prev: 0072
+	next: 3008
+]
+
+[
+	addr: 3008
+	size: 1056
+	left_size: 400
+	allocated: false
+	prev: 2256
+	next: 2120
+]
+
+[
+	addr: 2120
+	size: 24
+	left_size: 24
+	allocated: false
+	prev: 3008
+	next: NULLPTR
+]
+
+BREAK

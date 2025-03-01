@@ -1,0 +1,38 @@
+#! /bin/bash
+function abort() {
+    printf "\033[0;31m$(basename "$0") Failed.\033[0m\n"
+    cat ./tmp/test-iterative-directory-properties 2>/dev/null
+    rm -rf ./tmp
+    kill -15 $PID
+    exit 0
+}
+
+../myhttpd 0 > /dev/null 2>&1 &
+PID=$!
+sleep 1
+PORT=$(netstat -ntlp 2> /dev/null | awk 'split($7, a, "/"); split($4, b, ":"); {print b[2]" "a[1]}' | awk -v pid="$PID" '$2==pid {print $1}')
+USERSTRING=$(cat ../auth.txt)
+
+mkdir -p tmp
+./rowsearch.py 1 $PORT "/directory/" > ./tmp/test-iterative-directory-properties
+
+for f in ./http-root-dir/htdocs/directory/*; do
+    fn=${f##*/}
+    if [ -d "${f}" ]; then
+        grep "${fn}" ./tmp/test-iterative-directory-properties | grep -q "folder\.gif" || { echo ${fn} does not have the folder icon; abort; }
+    elif [ -f "${f}" ]; then
+        case "${fn##*.}" in
+            gif | png | jpg | jpeg | svg )
+                grep "${fn}" ./tmp/test-iterative-directory-properties | grep -q "image\.gif" || { echo ${fn} does not have the image icon; abort; }
+                ;;
+            *)
+                grep "${fn}" ./tmp/test-iterative-directory-properties | grep -q "text\.gif" || { echo ${fn} does not have the text icon; abort; }
+                ;;
+        esac
+    fi
+done
+
+printf "\033[0;32m$(basename "$0") Passed.\033[0m\n"
+rm -rf ./tmp
+kill -15 $PID
+exit 1

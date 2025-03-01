@@ -1,0 +1,41 @@
+#!/bin/bash
+
+
+if [ "$#" -ne 0 ]; then
+    echo "Usage: lookupnumber"
+    exit 1
+fi
+
+echo "Welcome to the House Directory Lookup!"
+echo -n "Please enter part or all of a representative name to search for: "
+read input
+
+list=$(grep -F "$input" employees.csv | sort | head -n 1)
+
+if [ -z "$list" ]; then
+    echo "Sorry, I could not find that representative."
+    exit 1
+fi
+
+count=$(grep -c -F "$input" employees.csv)
+
+if [ "$count" -gt 1 ]; then
+    echo "I found $count matches!"
+    echo "You might want to be more specific."
+fi
+
+IFS='\' read -r name title office address phone <<< "$list"
+
+echo "The first of these matches is:"
+echo "Name: $name"
+echo "Title: $title"
+echo "Office: $office"
+if [ -z "$address" ]; then
+    echo "Address: None"
+else
+    echo "Address: $address"
+fi
+echo "Phone: $(echo $phone | sed 's/\(.\{3\}\)\(.\{3\}\)\(.\{4\}\)/(\1) \2-\3/')"
+
+exit 0
+

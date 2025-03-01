@@ -1,0 +1,60 @@
+
+Test 1: SUCCESS
+
+Test 1-m32: SUCCESS
+
+Test 2-DefaultArena: SUCCESS
+
+Test 2-SmallArena: SUCCESS
+
+Test 2-DefaultArena-m32: SUCCESS
+
+Test 2-SmallArena-m32: SUCCESS
+
+Test 3: SUCCESS
+
+Test 3-m32: SUCCESS
+
+Test 4: SUCCESS
+
+Test 4-m32: SUCCESS
+
+Test 5: SUCCESS
+
+Test 5-m32: SUCCESS
+
+Test 9-DefaultMinAlloc: SUCCESS
+
+Test 9-LargeMinAlloc: SUCCESS
+
+Test 9-DefaultMinAlloc-m32: SUCCESS
+
+Test 9-LargeMinAlloc-m32: SUCCESS
+
+Test 10: SUCCESS
+
+Test 10-m32: SUCCESS
+
+Test 11: SUCCESS
+
+Test 11-m32: SUCCESS
+
+Test 12-First: SUCCESS
+
+Test 12-Best: FAIL (diff)
+
+Test 12-Worst: SUCCESS
+
+Test 12-First-m32: SUCCESS
+
+Test 12-Best-m32: FAIL (diff)
+
+Test 12-Worst-m32: SUCCESS
+
+Test 13: SUCCESS
+
+Test 13-m32: SUCCESS
+
+Test 14: FAIL (diff)
+
+Test 14-m32: FAIL (diff)

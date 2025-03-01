@@ -1,0 +1,5 @@
+
+Host Name	Architecture (x86, SPARC)	Endianess
+lore.cs.purdue.edu	SunOS lore.cs.purdue.edu 5.10 Generic_150400-59 sun4u sparc SUNW,Sun-Fire-V445	Big Endian
+data.cs.purdue.edu	Linux data.cs.purdue.edu 5.4.0-92-generic #103-Ubuntu SMP Fri Nov 26 16:13:00 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux	Little Endian
+

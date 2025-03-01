@@ -1,0 +1,10 @@
+331 Password please.
+230 User logged in.
+331 Password please.
+230 User logged in.
+257 "client1_dir" has been created.
+257 "client2_dir" has been created.
+250 Directory removed successfully.
+250 Directory removed successfully.
+221 Goodbye.
+221 Goodbye.

@@ -1,0 +1,70 @@
+M	employees.csv
+Your branch is up to date with 'origin/master'.
+[master 4b08cf2] Submission for project 1
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 16 files changed, 552 insertions(+), 9043 deletions(-)
+ create mode 100644 .local.git.out
+ create mode 100755 a.out
+ create mode 100644 addresses
+ create mode 100755 compile
+ rewrite employees.csv (99%)
+ create mode 100755 hailstone
+ create mode 100644 input1.data
+ create mode 100644 input2.data
+ create mode 100644 input3.data
+ create mode 100755 lookupnumber
+ create mode 100644 part2-sample.tar.gz
+ create mode 100755 radanalysis
+ create mode 100644 src1.c
+ create mode 100644 src2.c
+ create mode 100644 src3.c
+ create mode 100755 verify
+M	.local.git.out
+M	compile
+Your branch is up to date with 'origin/master'.
+[master 9ddf899] Submission for project 1
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 38 insertions(+), 4 deletions(-)
+M	.local.git.out
+M	verify
+Your branch is up to date with 'origin/master'.
+[master 5eec218] Submission for project 1
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 79 insertions(+), 69 deletions(-)
+ rewrite verify (89%)

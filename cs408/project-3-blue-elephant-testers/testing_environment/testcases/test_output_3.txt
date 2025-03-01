@@ -1,0 +1,5 @@
+331 Password please.
+230 User logged in.
+451 Failed to change directory.
+257 "/" is the current working directory.
+221 Goodbye.

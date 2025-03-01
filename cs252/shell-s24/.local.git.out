@@ -1,0 +1,766 @@
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	command.cc
+M	command.hh
+M	shell.l
+M	shell.y
+M	simpleCommand.cc
+M	test-shell/file-list-1
+Your branch is up to date with 'origin/master'.
+[master f6cc655] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 9 files changed, 3755 insertions(+), 46 deletions(-)
+ create mode 100644 lex.yy.cc
+ create mode 100644 y.tab.cc
+ create mode 100644 y.tab.hh
+M	shell.y
+M	y.tab.cc
+M	y.tab.hh
+Your branch is up to date with 'origin/master'.
+[master 2d8fa94] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 201 insertions(+), 77 deletions(-)
+M	lex.yy.cc
+M	shell.y
+M	y.tab.cc
+Your branch is up to date with 'origin/master'.
+[master 27c9147] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 315 insertions(+), 79 deletions(-)
+M	y.tab.cc
+Your branch is up to date with 'origin/master'.
+[master 2a7b10c] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 33 insertions(+), 32 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	command.o
+	filename]
+	lex.yy.o
+	shell
+	shell.o
+	simpleCommand.o
+	test-shell/err2
+	test-shell/out
+	test-shell/out2
+	test-shell/sh-in
+	test-shell/sh-out
+	test-shell/shell-in
+	test-shell/shell-out
+	y.tab.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	command.cc
+Your branch is up to date with 'origin/master'.
+[master fac459c] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M	command.cc
+Your branch is up to date with 'origin/master'.
+[master d88a3c1] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+M	command.cc
+Your branch is up to date with 'origin/master'.
+[master 12a83d9] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+M	command.cc
+Your branch is up to date with 'origin/master'.
+[master e118ae4] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+M	simpleCommand.cc
+Your branch is up to date with 'origin/master'.
+[master aa168b2] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 85 insertions(+), 2 deletions(-)
+M	simpleCommand.cc
+Your branch is up to date with 'origin/master'.
+[master 9a48c8e] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+M	simpleCommand.cc
+Your branch is up to date with 'origin/master'.
+[master 4ff5d97] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+M	simpleCommand.cc
+Your branch is up to date with 'origin/master'.
+[master d0f859e] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 41 deletions(-)
+M	simpleCommand.cc
+Your branch is up to date with 'origin/master'.
+[master 4cd7b9a] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 deletions(-)
+M	simpleCommand.cc
+Your branch is up to date with 'origin/master'.
+[master 210f993] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	command.o
+	filename]
+	lex.yy.o
+	shell.o
+	simpleCommand.o
+	test-shell/err2
+	test-shell/out
+	test-shell/out2
+	test-shell/sh-in
+	test-shell/sh-out
+	test-shell/shell-in
+	test-shell/shell-out
+	y.tab.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	command.o
+	filename]
+	lex.yy.o
+	shell.o
+	simpleCommand.o
+	test-shell/err2
+	test-shell/out
+	test-shell/out2
+	test-shell/sh-in
+	test-shell/sh-out
+	test-shell/shell-in
+	test-shell/shell-out
+	y.tab.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+D	lex.yy.cc
+D	y.tab.cc
+D	y.tab.hh
+Your branch is up to date with 'origin/master'.
+[master 507dad5] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 3637 deletions(-)
+ delete mode 100644 lex.yy.cc
+ delete mode 100644 y.tab.cc
+ delete mode 100644 y.tab.hh
+M	Makefile
+Your branch is up to date with 'origin/master'.
+[master 83344f7] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 3638 insertions(+), 1 deletion(-)
+ create mode 100644 lex.yy.cc
+ create mode 100644 y.tab.cc
+ create mode 100644 y.tab.hh
+M	Makefile
+Your branch is up to date with 'origin/master'.
+[master 83ba2b9] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M	Makefile
+Your branch is up to date with 'origin/master'.
+[master 29f5c27] \Total:                   0.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M	shell.l
+M	shell.y
+M	test-shell/file-list-1
+M	test-shell/file-list-2
+M	test-shell/testall.out
+Your branch is up to date with 'origin/master'.
+[master 6f2f666] \Total:                   3.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 100 insertions(+), 16 deletions(-)
+M	shell.y
+M	y.tab.cc
+M	y.tab.hh
+Your branch is up to date with 'origin/master'.
+[master 43f1ef9] \Total:                   3.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 43 insertions(+), 34 deletions(-)
+M	lex.yy.cc
+M	shell.y
+M	y.tab.cc
+M	y.tab.hh
+Your branch is up to date with 'origin/master'.
+[master a453bac] \Total:                   3.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 255 insertions(+), 60 deletions(-)
+M	shell.y
+M	y.tab.cc
+M	y.tab.hh
+Your branch is up to date with 'origin/master'.
+[master fa30f80] \Total:                   3.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 99 insertions(+), 271 deletions(-)
+M	command.hh
+M	shell.l
+M	test-shell/file-list-1
+M	test-shell/file-list-2
+M	y.tab.cc
+M	y.tab.hh
+Your branch is up to date with 'origin/master'.
+[master b52a974] \Total:                   3.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 6 files changed, 121 insertions(+), 108 deletions(-)
+M	lex.yy.cc
+M	shell.cc
+M	test-shell/file-list-1
+M	test-shell/file-list-2
+Your branch is up to date with 'origin/master'.
+[master 912d6df] \Total:                   3.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 18 insertions(+), 19 deletions(-)
+M	shell.l
+M	test-shell/file-list-1
+M	test-shell/file-list-2
+M	test-shell/test_robustness
+M	test-shell/testall.out
+Your branch is up to date with 'origin/master'.
+[master 57b79f2] \Total:                   38.5 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 49 insertions(+), 25 deletions(-)
+M	lex.yy.cc
+M	shell.l
+M	test-shell/testall.out
+Your branch is up to date with 'origin/master'.
+[master b2b9d76] \Total:                   40.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 202 insertions(+), 164 deletions(-)
+M	lex.yy.cc
+M	shell.l
+Your branch is up to date with 'origin/master'.
+[master a1acac2] \Total:                   40.0 of 70.0\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 60 insertions(+), 73 deletions(-)
+M	lex.yy.cc
+M	test-shell/testall.out
+Your branch is up to date with 'origin/master'.
+[master 4bd78ca] \test_escape Passed 2/2\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 29 insertions(+), 41 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	command.o
+	filename]
+	lex.yy.o
+	out
+	shell
+	shell.o
+	simpleCommand.o
+	test-shell/;
+	test-shell/err1
+	test-shell/err2
+	test-shell/hello world
+	test-shell/myshell
+	test-shell/out
+	test-shell/out1
+	test-shell/out2
+	test-shell/sh-in
+	test-shell/sh-out
+	test-shell/shell-in
+	test-shell/shell-out
+	y.tab.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	shell.l
+Your branch is up to date with 'origin/master'.
+[master 8edbdcf] \test_escape Passed 2/2\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+M	lex.yy.cc
+Your branch is up to date with 'origin/master'.
+[master 5214572] \test_escape Passed 2/2\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 17 insertions(+), 12 deletions(-)
+M	shell.l
+Your branch is up to date with 'origin/master'.
+[master f24f343] \test_escape Passed 2/2\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M	lex.yy.cc
+M	shell.l
+Your branch is up to date with 'origin/master'.
+[master 7964d80] \test_escape Passed 2/2\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 33 insertions(+), 5 deletions(-)
+M	lex.yy.cc
+M	shell.l
+M	shell.y
+M	test-shell/file-list-1
+M	test-shell/file-list-2
+M	test-shell/testall.out
+Your branch is up to date with 'origin/master'.
+[master 57cf774] \test_escape Passed 2/2\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 6 files changed, 416 insertions(+), 505 deletions(-)
+ rewrite shell.l (96%)
+ rewrite shell.y (96%)
+ rewrite test-shell/file-list-1 (100%)
+M	y.tab.cc
+M	y.tab.hh
+Your branch is up to date with 'origin/master'.
+[master fe96206] \test_escape Passed 2/2\
+ Committer: Shivli Agrawal <agraw185@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 309 insertions(+), 247 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	command.o
+	filename]
+	lex.yy.o
+	out
+	shell
+	shell.o
+	simpleCommand.o
+	test-shell/;
+	test-shell/err1
+	test-shell/err2
+	test-shell/myshell
+	test-shell/out
+	test-shell/out1
+	test-shell/out2
+	test-shell/sh-in
+	test-shell/shell-in
+	y.tab.o
+
+nothing added to commit but untracked files present (use "git add" to track)

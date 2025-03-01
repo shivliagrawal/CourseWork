@@ -1,0 +1,4 @@
+331 Password please.
+230 User logged in.
+213 <size_of_file>
+221 Goodbye.

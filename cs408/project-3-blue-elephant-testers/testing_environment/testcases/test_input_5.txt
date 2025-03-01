@@ -1,0 +1,8 @@
+bftpd.conf
+1:USER cs408
+1:PASS cs408
+1:PASV
+1:LIST
+1:STOR test_upload.txt
+1:RETR test_upload.txt
+1:QUIT

@@ -1,0 +1,9 @@
+331 Password please.
+230 User logged in.
+257 "test_dir" has been created.
+250 Directory successfully changed.
+150 Ready to receive file.
+226 Transfer complete.
+250 Directory successfully changed.
+550 Directory not empty.
+221 Goodbye.

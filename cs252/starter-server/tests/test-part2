@@ -1,0 +1,96 @@
+#!/bin/bash
+
+make -C ..
+
+# test runner
+# parameters: testname testpoints
+run_test () {
+    test_name=$1
+    test_pts=$2
+    grade_max=$(echo "$grade_max + $test_pts" | bc)
+
+    echo "TEST: ${test_name}"
+    timeout --preserve-status 60 ./$test_name
+    status=$?
+    if [[ status -gt 10 ]]; then
+        status=0
+    fi
+    if [[ status -eq 0 ]]; then
+        echo "Points: 0/$test_pts"
+    else
+        echo "Points: $test_pts/$test_pts"
+	grade=$(echo "$grade + $test_pts" | bc)
+    fi
+}
+
+# clear global vars vefore each section so they assign points per section
+clear_vars () {
+    grade=0
+    grade_max=0
+}
+
+# pretty print the start of sections
+section_start () {
+    echo -e "=== $1 Start ==="
+}
+
+# pretty print the end of sections
+section_end () {
+    echo -e "=== $1 End === ($grade / $grade_max points) \n"
+}
+
+section_start "TLS Tests"
+clear_vars
+run_test test-iterative-auth-accept-tls                     1
+run_test test-iterative-simple-tls                          2
+run_test test-iterative-index-tls                           2
+run_test test-iterative-complex-html-tls                    3
+run_test test-iterative-mime-types-tls                      3
+run_test test-iterative-complex-embeds-tls                  3
+run_test test-iterative-sigpipe-tls                         2
+run_test test-error-unauthorized-tls                        1
+run_test test-error-forbidden-tls                           1
+run_test test-error-not-found-tls                           1
+run_test test-error-method-tls                              1
+grade1=$grade
+grade1max=$grade_max
+section_end "TLS Tests"
+
+section_start "CGI Tests"
+clear_vars
+run_test test-iterative-cgi-bin                             1
+run_test test-iterative-cgi-bin-args                        3
+run_test test-iterative-cgi-bin-mod                         7
+run_test test-iterative-cgi-bin-tls                         3
+run_test test-iterative-cgi-bin-args-tls                    3
+grade2=$grade
+grade2max=$grade_max
+section_end "CGI Tests"
+
+section_start "Directory Browsing Tests"
+clear_vars
+run_test test-iterative-directory-listing-slash             2
+run_test test-iterative-directory-properties                3
+run_test test-iterative-directory-icon                      3
+run_test test-iterative-directory-listing-slash-tls         2
+grade3=$grade
+grade3max=$grade_max
+section_end "Directory Browsing Tests"
+
+section_start "Security Tests"
+clear_vars
+run_test test-iterative-overflow                            3
+grade4=$grade
+grade4max=$grade_max
+section_end "Security Tests"
+
+total_score=`echo "$grade1 + $grade2 + $grade3 + $grade4" | bc`
+total_max=`echo "$grade1max + $grade2max + $grade3max + $grade4max" | bc`
+
+printf "TLS Tests:                      %03.1f%s%03.1f\n" $grade1 " of " $grade1max
+printf "CGI Tests:                      %03.1f%s%03.1f\n" $grade2 " of " $grade2max
+printf "Directory Browsing Tests:       %03.1f%s%03.1f\n" $grade3 " of " $grade3max
+printf "Security Tests:                 %03.1f%s%03.1f\n" $grade4 " of " $grade4max
+
+echo Score,Total
+echo $total_score,$total_max

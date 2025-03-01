@@ -1,0 +1,5 @@
+bftpd.conf
+1:USER invalid_user
+1:PASS invalid_password
+1:PWD
+1:QUIT

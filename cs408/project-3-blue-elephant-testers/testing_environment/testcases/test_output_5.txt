@@ -1,0 +1,10 @@
+331 Password please.
+230 User logged in.
+227 Entering Passive Mode (127,0,0,1,xx,xx)
+150 Here comes the directory listing.
+226 Directory send OK.
+150 Ready to receive file.
+226 Transfer complete.
+150 Opening data connection for test_upload.txt.
+226 Transfer complete.
+221 Goodbye.

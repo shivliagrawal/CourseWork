@@ -1,0 +1,4 @@
+530 Login incorrect.
+503 Not logged in.
+503 Not logged in.
+221 Goodbye.

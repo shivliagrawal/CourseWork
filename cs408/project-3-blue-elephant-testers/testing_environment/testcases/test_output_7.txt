@@ -1,0 +1,6 @@
+331 Password please.
+230 User logged in.
+421 Too many users are logged in, try later.
+503 Not logged in.
+221 Goodbye.
+221 Goodbye.

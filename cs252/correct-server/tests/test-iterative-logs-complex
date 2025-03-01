@@ -1,0 +1,40 @@
+#! /bin/bash
+
+rm -f myhttpd.log
+../myhttpd 0 > /dev/null 2>&1 &
+PID=$!
+
+function abort() {
+  cat myhttpd.log
+  kill -15 $PID
+  exit 0
+}
+
+prlimit --nofile=65536 --nproc=50 --cpu=600 --rss=4000000 -p $PID
+
+PORT=$(netstat -ntlp 2> /dev/null | awk 'split($7, a, "/"); split($4, b, ":"); {print b[2]" "a[1]}' | awk -v pid="$PID" '$2==pid {print $1}')
+USERSTRING=$(cat ../auth.txt)
+sleep 1
+REQUESTS=( index.html complex.html non.html )
+
+for REQUEST in ${REQUESTS[@]}; do
+  ~cs252/bin/ab -q -r -A $USERSTRING -n 128 -c 8 "http://127.0.0.1:$PORT/$REQUEST" 2>&1 &
+  wait $!
+done
+
+if [[ $(grep '/index.html (200)' myhttpd.log | wc -l) != 128 ]]; then
+  echo "/index.html (200) should appear 128 times in log"
+  abort
+elif [[ $(grep '/complex.html (200)' myhttpd.log | wc -l) != 128 ]]; then
+  echo "/complex.html (200) should appear 128 times in log"
+  abort
+elif [[ $(grep '/non.html (404)' myhttpd.log | wc -l) != 128 ]]; then
+  echo "/non.html (404) should appear 128 times in log"
+  abort
+fi
+
+if kill -0 $PID 2> /dev/null; then
+  printf "\033[0;32m$(basename "$0") Passed.\033[0m\n"
+  kill -15 $PID
+  exit 1
+fi

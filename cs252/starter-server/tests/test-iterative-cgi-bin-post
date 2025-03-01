@@ -1,0 +1,24 @@
+#!/bin/bash
+
+../myhttpd 0 > /dev/null 2>&1 &
+PID=$!
+chmod +x ./http-root-dir/cgi-bin/*
+sleep 1
+PORT=$(netstat -ntlp 2> /dev/null | awk 'split($7, a, "/"); split($4, b, ":"); {print b[2]" "a[1]}' | awk -v pid="$PID" '$2==pid {print $1}')
+USERSTRING=$(cat ../auth.txt)
+KV1="$(echo $RANDOM | md5sum | head -c 20)=$(echo $RANDOM | md5sum | head -c 20)"
+KV2="$(echo $RANDOM | md5sum | head -c 20)=$(echo $RANDOM | md5sum | head -c 20)"
+KV3="$(echo $RANDOM | md5sum | head -c 20)=$(echo $RANDOM | md5sum | head -c 20)"
+RESULT="$(curl -X POST -s -u $USERSTRING "127.0.0.1:$PORT/cgi-bin/env?$KV1&$KV2&$KV3")"
+kill -15 $PID
+if echo "$RESULT" | grep -q "$KV1" &&
+  echo "$RESULT" | grep -q "$KV2" &&
+  echo "$RESULT" | grep -q "$KV3"; then
+  printf "\033[0;32m$(basename "$0") Passed.\033[0m\n"
+  exit 1
+else
+  printf "\033[0;31m$(basename "$0") Failed.\033[0m\n"
+  echo "$RESULT: ${$RESULT}"
+  echo "  should contain all of $KV1, $KV2, and $KV3"
+  exit 0
+fi

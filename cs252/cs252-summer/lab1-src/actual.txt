@@ -1,0 +1,183 @@
+TEST: test_simple2.c
+INTIAL STATE
+
+FREELIST
+L58: [
+	addr: 0016
+	size: 992
+	left_size: 16
+	allocated: false
+	prev: SENTINEL
+	next: SENTINEL
+]
+
+TAGS
+[
+	addr: 0000
+	size: 16
+	left_size: 16
+	allocated: fencepost
+]
+[
+	addr: 0016
+	size: 992
+	left_size: 16
+	allocated: false
+	prev: SENTINEL
+	next: SENTINEL
+]
+[
+	addr: 1008
+	size: 16
+	left_size: 992
+	allocated: fencepost
+]
+
+---- Running test1-2 ---
+Before any allocation
+[
+	addr: 0000
+	size: 16
+	left_size: 16
+	allocated: fencepost
+]
+[
+	addr: 0016
+	size: 992
+	left_size: 16
+	allocated: false
+	prev: SENTINEL
+	next: SENTINEL
+]
+[
+	addr: 1008
+	size: 16
+	left_size: 992
+	allocated: fencepost
+]
+mallocing 8 bytes
+[F][A][U][F]
+mem1 = malloc(8)
+[
+	addr: 0000
+	size: 16
+	left_size: 16
+	allocated: fencepost
+]
+[
+	addr: 0016
+	size: 32
+	left_size: 16
+	allocated: true
+]
+[
+	addr: 0048
+	size: 960
+	left_size: 32
+	allocated: false
+	prev: SENTINEL
+	next: SENTINEL
+]
+[
+	addr: 1008
+	size: 16
+	left_size: 960
+	allocated: fencepost
+]
+mallocing 8 bytes
+[F][A][A][U][F]
+mem2 = malloc(8)
+[
+	addr: 0000
+	size: 16
+	left_size: 16
+	allocated: fencepost
+]
+[
+	addr: 0016
+	size: 32
+	left_size: 16
+	allocated: true
+]
+[
+	addr: 0048
+	size: 32
+	left_size: 32
+	allocated: true
+]
+[
+	addr: 0080
+	size: 928
+	left_size: 32
+	allocated: false
+	prev: SENTINEL
+	next: SENTINEL
+]
+[
+	addr: 1008
+	size: 16
+	left_size: 928
+	allocated: fencepost
+]
+mallocing 8 bytes
+[F][A][A][A][U][F]
+Freelist Verification Failed: Allocated block in freelist
+mem3 = malloc(8)
+[
+	addr: 0000
+	size: 16
+	left_size: 16
+	allocated: fencepost
+]
+[
+	addr: 0016
+	size: 32
+	left_size: 16
+	allocated: true
+]
+[
+	addr: 0048
+	size: 32
+	left_size: 32
+	allocated: true
+]
+[
+	addr: 0080
+	size: 32
+	left_size: 32
+	allocated: true
+]
+[
+	addr: 0112
+	size: 896
+	left_size: 32
+	allocated: false
+	prev: SENTINEL
+	next: SENTINEL
+]
+[
+	addr: 1008
+	size: 16
+	left_size: 896
+	allocated: fencepost
+]
+FINAL STATE
+
+FREELIST
+L54: [
+	addr: 0112
+	size: 896
+	left_size: 32
+	allocated: false
+	prev: SENTINEL
+	next: SENTINEL
+]
+
+L56: [
+	addr: 0080
+	size: 32
+	left_size: 32
+	allocated: true
+]
+[
+	addr: -94108730146816

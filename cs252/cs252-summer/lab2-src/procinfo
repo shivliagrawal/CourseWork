@@ -1,0 +1,66 @@
+#!/bin/bash
+
+#Do not insert code here
+
+#DO NOT REMOVE THE FOLLOWING TWO LINES
+git add $0 >> .local.git.out
+git commit -a -m "Lab 2 commit" >> .local.git.out
+git push >> .local.git.out || echo
+
+
+
+# Function to get process info
+get_proc_info() {
+  pattern=$1
+  echo "    PID    PPID      CMD      USER         MEM          CPU        THREADS"
+
+  for pid in $(ps -e -o pid=); do
+    if [ -d "/proc/$pid" ]; then
+      cmd=$(cat /proc/$pid/cmdline 2>/dev/null | tr '\0' ' ' | grep -o "$pattern" || true)
+      if [ -n "$cmd" ]; then
+        ppid=$(awk '{print $4}' /proc/$pid/stat 2>/dev/null)
+        user=$(ps -o user= -p $pid 2>/dev/null)
+        mem=$(awk '/VmRSS/{print $2}' /proc/$pid/status 2>/dev/null)
+        mem=$((mem / 1024)) # Convert to MB
+        mem="${mem}MB"
+        cpu=$(awk '{print $14+$15}' /proc/$pid/stat 2>/dev/null)
+        cpu=$((cpu / 100)) # Convert to seconds
+        threads=$(awk '/Threads/{print $2}' /proc/$pid/status 2>/dev/null)
+
+        printf "%7s %7s %10s %10s %12s %10ss %7sThr\n" "$pid" "$ppid" "($cmd)" "$user" "$mem" "$cpu" "$threads"
+      fi
+    fi
+  done
+}
+
+# Check if pattern is provided
+if [ $# -lt 1 ]; then
+  echo "Error: pattern missing"
+  exit 1
+fi
+
+# Parse command line arguments
+interval=0
+if [ "$1" == "-t" ]; then
+  if [ -z "$2" ] || ! [[ "$2" =~ ^[0-9]+$ ]]; then
+    echo "Error: Invalid interval"
+    exit 1
+  fi
+  interval=$2
+  pattern=$3
+else
+  pattern=$1
+fi
+
+# Main loop
+if [ $interval -gt 0 ]; then
+  while true; do
+    clear
+    get_proc_info "$pattern"
+    sleep $interval
+  done
+else
+  get_proc_info "$pattern"
+fi
+
+

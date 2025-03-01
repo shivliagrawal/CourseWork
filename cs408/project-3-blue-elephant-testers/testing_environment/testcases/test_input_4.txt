@@ -1,0 +1,9 @@
+bftpd.conf
+1:USER cs408
+1:PASS cs408
+1:MKD test_dir
+1:CWD test_dir
+1:STOR test_file.txt
+1:CWD ..
+1:RMD test_dir
+1:QUIT

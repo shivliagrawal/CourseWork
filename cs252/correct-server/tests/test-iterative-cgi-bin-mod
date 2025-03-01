@@ -1,0 +1,24 @@
+#! /bin/bash
+
+../myhttpd 0 2>&1 > /dev/null &
+PID=$!
+make -C ./http-root-dir/cgi-src 2>&1 > /dev/null
+chmod +x ./http-root-dir/cgi-bin/*
+sleep 1
+PORT=$(ss -l -p -n | grep $PID | awk '{print $5}' | cut -d ":" -f2)
+USERSTRING=$(cat auth.txt)
+grep -q "Hello. Hi from hello.so" <(curl -s -u $USERSTRING "127.0.0.1:$PORT/cgi-bin/hello.so" | tail -n 1)
+if [[ $? != 0 ]]; then
+  printf "$(basename "$0") Failed.\n"
+  kill -15 $PID
+  exit 0
+else
+  kill -15 $PID
+  if [[ $? != 0 ]]; then
+    echo "failed to kill server process"
+    printf "$(basename "$0") Failed.\n"
+    exit 0
+  fi
+  printf "$(basename "$0") Passed.\n"
+  exit 1
+fi

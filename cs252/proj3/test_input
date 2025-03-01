@@ -1,0 +1,2 @@
+ls . >> file-list-2
+ls -a $(cat file-list-2)

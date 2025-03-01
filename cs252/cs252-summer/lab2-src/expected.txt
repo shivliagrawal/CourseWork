@@ -1,0 +1,21 @@
+Password                         Score
+---------------------            -----
+qqqqqqqqqqqqqqqqqqqqqqqqqqqq...  Error: Password length invalid.
+abcd5                            Error: Password length invalid.
+aBcDeF                              11
+aBcDeFgHiJkLmNoPqRsTuVwXyZaBcDe     36
+aBc9F1                              16
+aBcDeFg94JkLmNo8qRsTuVwXyZaBcD2     41
+aBcDeF@                             17
+aBcDeF$                             17
+AbCdEfGG                             3
+aBcDeFgg                             3
+aBcDeFgHiJkawfa                     17
+abcdefghijkl                        14
+AbCdEfGhIjKAWFA                     17
+ABCDEFGHIJKL                        14
+123456                              -2
+ab12345f2456gD986f2e35a6f           32
+Exon#Mobi@Le21                      26
+123456789abcdef@gDWSS@Aw4           21
+

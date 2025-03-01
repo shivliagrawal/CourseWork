@@ -1,0 +1,3 @@
+Running test4
+Sorting {1, 1, 2, 2, 3, 3, 500, 1, 3} in descending order...]
+{500, 3, 3, 3, 2, 2, 1, 1, 1}

@@ -1,0 +1,243 @@
+#!/bin/bash
+
+(make clean; make) || exit 1
+
+echo
+
+if [ "$#" -eq 0 ]; then
+	OPTION=0
+else OPTION=$1
+fi
+
+
+total=0
+totalmax=0
+tCount=0
+
+rm -f total.txt *out total.txt
+touch none
+
+# Test driver
+function runtest {
+	prog=$1
+	args=$2
+	testinput=$3
+	grade=$4
+	totalmax=`expr $totalmax + $grade`;
+	inputdescr=
+		if [ "$testinput" != "none" ]; then
+			inputdescr=" ($testinput)"
+		fi
+	descr="$prog $args $inputdescr"
+
+	echo "======= Test $tCount: $descr ==========="
+
+	#Run tested program
+	timeout 3 ./$prog $args > $prog.out
+	./$prog.org $args > $prog.org.out
+	diff $prog.out $prog.org.out > diff.out
+	if [ $? -eq 0 ]; then
+		#cat $prog.out
+		echo Test passed...;
+		printf "%-55s: %-3d of %-3d\n" "T $tCount: $descr " $grade $grade >> total.txt
+		total=`expr $total + $grade`;
+	else
+		echo "*****Test Failed*****";
+		echo ------ Your Output ----------
+		cat $prog.out
+		echo ------ Expected Output ------
+		cat $prog.org.out
+		echo ------ Difference -----------
+		cat diff.out
+		echo -----------------------------
+		printf "%-55s: %-3d of %-3d\n" "T $tCount: $descr " 0 $grade >> total.txt
+	fi
+		
+	echo
+}
+
+# Test driver
+function runtest2 {
+	prog=$1
+	args=$2
+	testinput=$3
+	grade=$4
+	totalmax=`expr $totalmax + $grade`;
+	inputdescr=
+		if [ "$testinput" != "none" ]; then
+			inputdescr=" ($testinput)"
+		fi
+	descr="$prog $args $inputdescr"
+	
+	echo "======= Test $tCount: $descr ==========="
+
+	#Run tested program
+	timeout 3 ./$prog $args > $prog.out
+	./$prog.org $args.org > $prog.org.out
+	diff $prog.out $prog.org.out > diff.out
+	if [ $? -eq 0 ]; then
+		#cat $prog.out
+		echo Test passed...;
+		printf "%-55s: %-3d of %-3d\n" "T $tCount: $descr " $grade $grade >> total.txt
+		total=`expr $total + $grade`;
+	else
+		echo "*****Test Failed*****";
+		echo ------ Your Output ----------
+		cat $prog.out
+		echo ------ Expected Output ------
+		cat $prog.org.out
+		echo ------ Difference -----------
+		cat diff.out
+		echo -----------------------------
+		printf "%-55s: %-3d of %-3d\n" "T $tCount: $descr " 0 $grade >> total.txt
+	fi
+		
+	echo
+}
+
+function generateFiles {
+	prog=$1
+	mode=$2
+	src=$3
+	dest=$4
+	args="$2 $3 $4"
+	timeout 3 ./$prog $args
+	args="$2 $3 $4.org"
+	./$prog.org $args
+}
+
+function rundiff {
+	out1=$1
+	out2=$2
+	testinput=$3
+	grade=$4
+	totalmax=`expr $totalmax + $grade`;
+	descr=
+		if [ "$testinput" != "none" ]; then
+			descr="$testinput"
+		else 
+			descr="diff $out1 $out2"
+		fi
+	
+	echo "======= Test $tCount: $descr ==========="
+
+	#Run diff of outputs
+	diff $out1 $out2
+	if [ $? -eq 0 ]; then
+		#cat $prog.out
+		echo Test passed...;
+		printf "%-55s: %-3d of %-3d\n" "T $tCount: $descr " $grade $grade >> total.txt
+		total=`expr $total + $grade`;
+	else
+		echo "*****Test Failed*****";
+		echo ------ Your Output ----------
+		cat $prog.out
+		echo ------ Expected Output ------
+		cat $prog.org.out
+		echo ------ Difference -----------
+		cat diff.out
+		echo -----------------------------
+		printf "%-55s: %-3d of %-3d\n" "T $tCount: $descr " 0 $grade >> total.txt
+	fi
+	echo
+}
+
+function printResults {
+	echo
+	echo   "-------------------------------------------------------------------"
+	echo   "CS240: Huffman Encoding Lab : $USER   "
+	echo   "-------------------------------------------------------------------"
+	cat total.txt
+	echo   "-------------------------------------------------------------------"
+	echo   "CS240: $LAB. $USER" `date` " Total: " $total of $totalmax >> total.txt
+	#echo "$total/$totalmax" >> total.out	
+	tail -1 total.txt
+	tail -1 total.txt >> .local.total.out
+}
+
+#Tests for printing the node array and the huffman tree
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 1 || $OPTION == "-p1" ]]; then
+	let tCount=1
+	runtest huffman "-ph helloWorld.txt" none 5
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 2 || $OPTION == "-p1" ]]; then
+	let tCount=2
+	runtest huffman "-pn helloWorld.txt" none 5
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 3 || $OPTION == "-p1" ]]; then
+	let tCount=3
+	runtest huffman "-pn wiki.txt" none 5
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 4 || $OPTION == "-p2" ]]; then
+	let tCount=4
+	runtest huffman "-p helloWorld.txt" none 5 
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 5 || $OPTION == "-p2" ]]; then
+	let tCount=5
+	runtest huffman "-p wiki.txt" none 10
+fi
+
+#tests to generate and decode a file (without printing the output)
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 6 || $OPTION == "-p3" ]]; then
+	let tCount=6
+	generateFiles huffman "-e" "helloWorld.txt" "encoded.huff"
+	rundiff "encoded.huff" "encoded.huff.org" "huffman -e helloWorld.txt encoded.huff" 5
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 7 || $OPTION == "-p3" ]]; then
+	let tCount=7
+	runtest huffman "-pc encoded.huff.org" none 5
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 8|| $OPTION == "-p3"  ]]; then
+	let tCount=8
+	generateFiles huffman "-d" "encoded.huff.org" "decoded.helloWorld"
+	rundiff "decoded.helloWorld" "decoded.helloWorld.org" "huffman -d encoded.huff.org decoded.helloWorld" 5
+fi
+
+#harder encoding tests that also test printing the huffman tree
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 9 || $OPTION == 10 || $OPTION == "-p3" ]]; then
+	let tCount=9
+	runtest2 huffman "-ep wiki.txt encoded.huff" none 5
+	let tCount=10
+	rundiff "encoded.huff" "encoded.huff.org" "Comparing encoded files..." 10
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 11 || $OPTION == 12 || $OPTION == "-p3" ]]; then
+	let tCount=11
+	runtest2 huffman "-dpc encoded.huff.org decoded.wiki" none 5
+	let tCount=12
+	rundiff "decoded.wiki" "decoded.wiki.org" "Comparing decoded files..." 10
+fi
+
+#decoding only tests for the encodedHello.huff file
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 13 || $OPTION == "-p3" ]]; then
+	let tCount=13
+	runtest huffman "-pc encodedHello.huff" none 5
+fi
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || $OPTION == 14 || $OPTION == 15 || $OPTION == "-p3" ]]; then
+	let tCount=14
+	runtest2 huffman "-dpc encodedHello.huff decoded.hello" none 5
+	let tCount=15
+	rundiff "decoded.hello" "decoded.hello.org" "Comparing decoded files..." 10
+fi
+
+#extraCredit Tests
+if [[ "$OPTION" == "-ec" || $OPTION == 16 || $OPTION == 17 ]]; then
+	if [[ "$OPTION" == "-ec" ]]; then
+		printf "\n" >> total.txt
+	fi
+	let tCount=16
+	runtest2 huffman "-ep extended.txt encoded.huff" none 5
+	let tCount=17
+	rundiff "encoded.huff" "encoded.huff.org" "Comparing encoded files..." 10
+fi
+if [[ "$OPTION" == "-ec" || $OPTION == 18 || $OPTION == 19 ]]; then		
+	let tCount=18
+	runtest2 huffman "-dpc encoded.huff.org decoded.extended" none 5
+	let tCount=19
+	rundiff "decoded.extended" "decoded.extended.org" "Comparing decoded files..." 10
+fi
+
+if [[ $OPTION == 0 || "$OPTION" == "-ec" || "$OPTION" == "-p1" || "$OPTION" == "-p2" || "$OPTION" == "-p3" ]]; then
+	printResults
+fi
+
+make c

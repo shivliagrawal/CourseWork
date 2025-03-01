@@ -1,0 +1,16 @@
+T 1: huffman -ph helloWorld.txt                        : 5   of 5  
+T 2: huffman -pn helloWorld.txt                        : 5   of 5  
+T 3: huffman -pn wiki.txt                              : 5   of 5  
+T 4: huffman -p helloWorld.txt                         : 5   of 5  
+T 5: huffman -p wiki.txt                               : 10  of 10 
+T 6: huffman -e helloWorld.txt encoded.huff            : 0   of 5  
+T 7: huffman -pc encoded.huff.org                      : 5   of 5  
+T 8: huffman -d encoded.huff.org decoded.helloWorld    : 5   of 5  
+T 9: huffman -ep wiki.txt encoded.huff                 : 5   of 5  
+T 10: Comparing encoded files...                       : 0   of 10 
+T 11: huffman -dpc encoded.huff.org decoded.wiki       : 5   of 5  
+T 12: Comparing decoded files...                       : 10  of 10 
+T 13: huffman -pc encodedHello.huff                    : 5   of 5  
+T 14: huffman -dpc encodedHello.huff decoded.hello     : 5   of 5  
+T 15: Comparing decoded files...                       : 10  of 10 
+CS240: . agraw185 Sun Dec 11 22:45:56 EST 2022  Total:  80 of 95

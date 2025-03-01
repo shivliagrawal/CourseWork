@@ -1,0 +1,5 @@
+problem_1: 25/25
+problem_3: 25/25
+
+CS240: Exam3. agraw185 Fri Dec 9 02:02:56 EST 2022
+Total Grade: 50/50

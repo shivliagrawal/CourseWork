@@ -1,0 +1,43 @@
+                             REDIRECTING INPUT
+                             _________________
+
+These problems do not use FILE i/o within the program, instead they use input
+redirection to send a file's contents to "stdin" which the program will read
+from.  This can be done by running the program like so:
+		./mytest < sample_input.txt
+
+Input can also be entered manually by running the compiled program, then
+entering each desired input value.  When you are done entering values, you will
+need to let the program know you are finished by pressing "ctrl + d".  This
+sets the EOF flag.
+
+
+                             HELPFUL FUNCTIONS
+                             _________________
+
+getchar(), ungetc(...), atoi(...), scanf(...), printf(..), getline(...)
+	Remember that you have access to the 'man' pages.
+
+
+                             PROBLEM DESCRIPTION
+                             ___________________
+
+You will create your own SCR-4-1-0.c file that contains the function `void printNums()`.
+This function reads in a stream of integers from stdin into an array.  The
+input will be a list of integers that are separated by a space. After the final
+integer in the file, there will immediately be a newline character to signal
+that all of the integers have been read.  The array is then printed in the
+order it was read in the given format.  
+
+
+                             EXAMPLES
+                             ________
+
+Input File contains:  "3 1 4 2 5\n"
+Function Outputs:     "{3, 1, 4, 2, 5}\n"
+
+Input File contains:  "1 2 3 4 5 6 7 8\n"
+Function Outputs:     "{1, 2, 3, 4, 5, 6, 7, 8}\n"
+
+Input File contains:  nothing or empty file
+Function Outputs:     "No integers were provided.\n"

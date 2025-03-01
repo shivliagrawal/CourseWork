@@ -1,0 +1,7 @@
+problem_1: 30/30
+problem_2: 30/30
+problem_3: 20/20
+problem_4: 20/20
+
+CS240: Exam2. agraw185 Fri Dec 9 02:04:31 EST 2022
+Total Grade: 100/100

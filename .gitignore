@@ -8,3 +8,6 @@ Templates/
 Videos/
 scratch/
 cs252/proj5/tests/http-root-dir/htdocs/forbidden
+.vscode-server/
+Cache/js/a76279b2567da8b8_0
+shared_proto_db/000003.log
